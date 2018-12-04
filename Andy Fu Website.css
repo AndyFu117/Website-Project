@@ -11,13 +11,15 @@ body {
 
 
 div.left_nav_bar{
-	position:absolute;
-	width:118.63px;
 	height:100%;
+	width:100px;
+	position:fixed;
+	z-index: 1;
+	top:0;
+	left:0;
 	background-color:white;
-	box-sizing:border-box;
-	border-right:2px solid #D3D3D3;
-	left:0%;
+	overflow-x: hidden;
+	padding-top: 20px;
 }
 
 div.menu_icon_holder {
@@ -161,7 +163,6 @@ div.overlay-content {
     position: relative;
     top: 2.25%;
     width: 100%;
-  /*  height:100%; */
     text-align: center;
 }
 
@@ -219,7 +220,7 @@ div.overlay_content:hover {
 	border:none;
 }
 
-a.overlay_anchor { /* refer to line 145*/
+a.overlay_anchor {
 	position:absolute;
 	width:100%;
 	height:100%;
@@ -249,18 +250,43 @@ div.header {
 	background:rgb(245,245,245);
 }
 
-
-
-div.button_container {
-	position:absolute;
-	width:19.8%;
-	height:29%;
-	top:0;
-	right:0;
+/*dankmemes*/
+div.top_nav_bar {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 50px;
+    width: 100%;
 }
 
+li.top_nav_bar {
+    float: left;
+}
 
-.main {
+li.top_nav_bar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/*dankmemes*/
+
+
+div.main {
     max-width: 1000px;
     margin: auto;
 }
